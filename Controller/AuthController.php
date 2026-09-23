@@ -392,7 +392,7 @@ class AuthController extends BaseController
     // FARMER REGISTRATION
     // ==========================================
 
-    public function registerFarmer(): void
+    public function farmerRegister(): void
     {
         $this->view(
             'auth/farmer_register'
