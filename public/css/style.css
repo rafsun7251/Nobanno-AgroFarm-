@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+.container,
+.page-container,
+.dashboard-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+
+/* ==============================
+   Navbar
+================================ */
+
+.navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.navbar-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.brand {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.brand-bangla {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+.brand-name {
+    font-size: 12px;
+    color: #777;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+
+.nav-links a {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.nav-links a:hover {
+    color: #2f7d32;
+}
+
+
+.logout-link {
+    color: #c62828;
+}
+
+
+/* ==============================
+   Buttons
+================================ */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    cursor: pointer;
+
+    padding: 11px 20px;
+
+    border-radius: 7px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+
+.btn-primary {
+    background: #2f7d32;
+    color: #ffffff;
+}
+
+
+.btn-primary:hover {
+    background: #256428;
+}
+
+
+.btn-secondary {
+    background: #eeeeee;
+    color: #222;
+}
+
+
+.btn-secondary:hover {
+    background: #dddddd;
+}
+
+
+.btn-danger {
+    background: #c62828;
+    color: #ffffff;
+}
+
+
+.btn-small {
+    padding: 7px 12px;
+    font-size: 13px;
+}
+
+
+.btn-full {
+    width: 100%;
+}
+
+
+/* ==============================
+   Forms
+================================ */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+
+    font-weight: 600;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    border: 1px solid #d7d7d7;
+
+    border-radius: 7px;
+
+    padding: 11px 13px;
+
+    background: #ffffff;
+
+    outline: none;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2f7d32;
+}
+
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* ==============================
+   Tables
+================================ */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    border: 1px solid #e5e5e5;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+th,
+td {
+    padding: 13px 15px;
+    text-align: left;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+th {
+    background: #f5f6f3;
+    font-weight: 700;
+}
+
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ==============================
+   Cards
+================================ */
+
+.product-card,
+.stat-card,
+.feature-card,
+.action-card {
+
+    background: #ffffff;
+
+    border: 1px solid #e7e7e7;
+
+    border-radius: 12px;
+
+    padding: 20px;
+}
+
+
+.product-card {
+    overflow: hidden;
+}
+
+
+/* ==============================
+   Page Header
+================================ */
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+
+.page-header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+
+.page-header p {
+    color: #666;
+}
+
+
+/* ==============================
+   Alerts
+================================ */
+
+.alert {
+    padding: 12px 15px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+
+.alert-success {
+    background: #e8f5e9;
+    color: #256428;
+}
+
+
+.alert-error {
+    background: #ffebee;
+    color: #b71c1c;
+}
+
+
+/* ==============================
+   Empty State
+================================ */
+
+.empty-state {
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e5e5;
+}
+
+
+.empty-state h2,
+.empty-state h3 {
+    margin-bottom: 10px;
+}
+
+
+.empty-state p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+/* ==============================
+   Error Page
+================================ */
+
+.error-page {
+    min-height: 70vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.error-container {
+    text-align: center;
+}
+
+
+.error-container h1 {
+    font-size: 80px;
+}
+
+
+.error-container h2 {
+    margin-bottom: 10px;
+}
+
+
+/* ==============================
+   Footer
+================================ */
+
+.footer {
+    margin-top: 60px;
+
+    background: #1f2921;
+
+    color: #ffffff;
+}
+
+
+.footer-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+
+    padding: 45px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 40px;
+}
+
+
+.footer h3,
+.footer h4 {
+    margin-bottom: 12px;
+}
+
+
+.footer p {
+    color: #cfd5d0;
+}
+
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid #384239;
+
+    text-align: center;
+
+    padding: 18px;
+}
+
+
+.footer-bottom p {
+    font-size: 13px;
+}
+
+
+/* ==============================
+   Responsive
+================================ */
+
+@media (max-width: 768px) {
+
+    .navbar-container {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+}
