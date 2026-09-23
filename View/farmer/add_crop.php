@@ -64,26 +64,47 @@ require __DIR__ . '/../layouts/header.php';
                             name="category"
                             required
                         >
+                    <option
+                     value=""
+                        >
+                        All Categories
+                    </option>
 
-                            <option value="">
-                                Select Category
-                            </option>
+                    <option
+                    value="vegetables"
+                    <?= $category === 'vegetables'
+                        ? 'selected'
+                        : '' ?> 
+                    >
+                    Vegetables
+                    </option>
 
-                            <option value="vegetable">
-                                Vegetable
-                            </option>
+                <option
+                    value="grains"
+                    <?= $category === 'grains'
+                    ? 'selected'
+                    : '' ?>
+                    >
+                    Grains
+                </option>
 
-                            <option value="fruit">
-                                Fruit
-                            </option>
+                <option
+                    value="fruits"
+                    <?= $category === 'fruits'
+                    ? 'selected'
+                    : '' ?>
+                    >
+                    Fruits  
+                </option>
 
-                            <option value="rice">
-                                Rice
-                            </option>
-
-                            <option value="spice">
-                                Spice
-                            </option>
+            <option
+                value="other"
+                <?= $category === 'other'
+                ? 'selected'
+                : '' ?>
+                >
+                Other
+            </option>
 
                         </select>
 
