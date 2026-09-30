@@ -73,16 +73,16 @@ require __DIR__ . '/../layouts/header.php';
                                 Vegetable
                             </option>
 
-                            <option value="fruit">
-                                Fruit
+                            <option value="grains">
+                                Grains
                             </option>
 
-                            <option value="rice">
-                                Rice
+                            <option value="fruits">
+                                Fruits
                             </option>
 
-                            <option value="spice">
-                                Spice
+                            <option value="others">
+                                Others
                             </option>
 
                         </select>

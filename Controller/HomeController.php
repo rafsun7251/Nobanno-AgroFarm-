@@ -1,12 +1,13 @@
 <?php
 
-class HomeController
-{
-    public function index()
-    {
-        $pageTitle = 'Home';
+require_once __DIR__ . '/BaseController.php';
 
-        require BASE_PATH
-            . '/View/home/index.php';
+class HomeController extends BaseController
+{
+    public function index(): void
+    {
+        $this->view(
+            'home/index'
+        );
     }
 }

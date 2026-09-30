@@ -198,7 +198,7 @@ class Crop
                 ON c.farmer_id = f.farmer_id
             INNER JOIN users u
                 ON f.user_id = u.user_id
-            WHERE c.status = 'active'
+            WHERE c.status = 'available'
               AND c.quantity > 0
             ORDER BY c.created_at DESC
         ";
@@ -234,7 +234,7 @@ class Crop
                 ON c.farmer_id = f.farmer_id
             INNER JOIN users u
                 ON f.user_id = u.user_id
-            WHERE c.status = 'active'
+            WHERE c.status = 'available'
               AND c.quantity > 0
         ";
 

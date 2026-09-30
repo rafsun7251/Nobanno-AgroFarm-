@@ -43,7 +43,7 @@ $category =
             <input
                 type="hidden"
                 name="page"
-                value="crops"
+                value="crops-search"
             >
 
 

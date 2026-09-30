@@ -62,37 +62,33 @@ class FarmerController extends BaseController
             count($crops);
 
         $activeCrops = 0;
-        $pendingCrops = 0;
+        $outOfStockCrops = 0;
         $totalQuantity = 0;
 
 
         foreach ($crops as $crop) {
 
-            $totalQuantity +=
-                (float)$crop['quantity'];
+        $totalQuantity +=
+        (float)$crop['quantity'];
 
 
-            if (
-                strtolower(
-                    $crop['status']
-                )
-                === 'active'
-            ) {
+          if (
+             strtolower(
+             $crop['status']
+                 ) === 'available'
+          ) {
+               $activeCrops++;
+               }
 
-                $activeCrops++;
-            }
-
-
-            if (
-                strtolower(
-                    $crop['status']
-                )
-                === 'pending'
-            ) {
-
-                $pendingCrops++;
-            }
-        }
+        if (
+       
+        strtolower(
+            $crop['status']
+        ) === 'out_of_stock'
+          ) {
+           $outOfStockCrops++;
+         }
+     }
 
 
         $this->view(
